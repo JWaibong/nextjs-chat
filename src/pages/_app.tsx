@@ -1,12 +1,15 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { WASMContextProvider } from '../context/WASM'
+import { SessionProvider } from "next-auth/react"
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps: {session, ...pageProps} }: AppProps) => {
   return (
+    <SessionProvider session={session}>
     <WASMContextProvider>
       <Component {...pageProps} />
     </WASMContextProvider>
+    </SessionProvider>
   )
 }
 

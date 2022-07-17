@@ -4,6 +4,10 @@ use wasm_bindgen::prelude::*;
 pub fn add(x: i32, y: i32) -> i32 {
     return x + y;
 }
+#[wasm_bindgen]
+pub fn mul(x: i32, y: i32) -> i32 {
+    return x*y; 
+}
 
 #[cfg(test)]
 mod tests {
