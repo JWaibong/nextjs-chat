@@ -15,7 +15,7 @@ export const Header = () => {
           {!session &&
             <>
               <span className={styles.notSignedInText}>You are not signed in</span>
-              <a
+              <Link
                 href='..../api/auth/signin'
                 className={styles.buttonPrimary}
                 onClick={(e) => {
@@ -24,7 +24,7 @@ export const Header = () => {
                 }}
               >
                 Sign in
-              </a>
+              </Link> 
             </>}
           {session &&
             <>
@@ -33,7 +33,7 @@ export const Header = () => {
                 <small>Signed in as</small><br />
                 <strong>{session.user.name || session.user.email}</strong>
               </span>
-              <a
+              <Link
                 href='/api/auth/signout'
                 className={styles.button}
                 onClick={(e) => {
@@ -42,7 +42,7 @@ export const Header = () => {
                 }}
               >
                 Sign out
-              </a>
+              </Link>
             </>}
         </p>
       </div>
