@@ -12,7 +12,7 @@ export const WASMContextProvider: React.FC<WASMContextProviderProps> = ({
 
   useEffect(() => {
     (async() => {
-      const wasm = await import('/home/jwaibong/wasm-ledger/wasm/pkg/wasm.js')
+      const wasm = await import('wasm')
       await wasm.default()
       setState({ wasm })
     })()
@@ -26,7 +26,7 @@ export const WASMContextProvider: React.FC<WASMContextProviderProps> = ({
 }
 
 interface IWASMContext {
-  wasm?: typeof import('/home/jwaibong/wasm-ledger/wasm/pkg/wasm.js')
+  wasm?: typeof import('wasm')
 }
 
 interface WASMContextProviderProps {
