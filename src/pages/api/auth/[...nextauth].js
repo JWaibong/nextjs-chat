@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import FacebookProvider from 'next-auth/providers/facebook'
+import GoogleProvider from 'next-auth/providers/google'
 // http://localhost:3000/api/auth/callback/github
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
@@ -27,6 +28,10 @@ const options = {
       clientId: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_SECRET
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET
+    })
     /* Providers.Twitter({
       clientId: process.env.TWITTER_ID,
       clientSecret: process.env.TWITTER_SECRET
