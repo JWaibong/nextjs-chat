@@ -49,10 +49,8 @@ export const Header = () => {
       <nav>
         <ul className={styles.navItems}>
           <li className={styles.navItem}><Link href='/'><a>Home</a></Link></li>
-          <li className={styles.navItem}><Link href='/client'><a>Client</a></Link></li>
-          <li className={styles.navItem}><Link href='/server'><a>Server</a></Link></li>
-          <li className={styles.navItem}><Link href='/protected'><a>ASD</a></Link></li>
-          <li className={styles.navItem}><Link href='/api-example'><a>API</a></Link></li>
+          <li className={styles.navItem}><Link href='/dashboard'><a>Dashboard</a></Link></li>
+          <li className={styles.navItem}><Link href='/chat'><a>Chat</a></Link></li>
         </ul>
       </nav>
     </header>
